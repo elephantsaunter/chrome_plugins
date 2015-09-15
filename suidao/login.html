@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>时空隧道</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/system.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+	<div class="container" style="width:300px;margin:100px auto;">
+		<div class="logo text-center">
+			<img src="img/logo.png">
+		</div>
+		<form id="loginform" class="form-signin" role="form">
+			<h3 class="text-center"><span class="showlogintips">登录</span></h3>
+			<div class="input-group mt10">
+			  <span class="input-group-addon">邮&nbsp;&nbsp;&nbsp;箱</span>
+			  <input type="email" name="email" class="form-control" placeholder="请输入邮箱" required autofocus>
+			</div>
+			<div class="input-group mt10">
+			  <span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+			  <input type="password" name="password" class="form-control" placeholder="请输入密码" required>
+			</div>
+			<input type="hidden" name="ajax" value="1">
+			<button class="btn btn-lg btn-primary btn-block mt10" type="submit"><span class="showlogintips">登录</span></button>
+		</form>
+		<div id="msg"></div>
+		<div class="text-center"><br /><a id="reg" href="login.html">免费注册</a></div>
+		<div class="text-center"><br /><a href="###" data-toggle="modal" data-target="#getPassWordModal">忘记密码</a></div>
+		<input type="hidden" id="loginstatus" value="login">
+	</div>
+
+<!-- 忘记密码 -->
+<div class="modal fade" id="getPassWordModal" tabindex="-1" role="dialog" aria-labelledby="getPassWordModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">找回密码</h4>
+      </div>
+      <div class="modal-body">
+        <form id="getpassword" class="form-signin">
+			<input type="email" name="email" class="form-control" placeholder="请输入邮箱" required>
+			<div class="text-center mt10"><a class="btn btn-sm btn-primary sendemail" href="login.html">发送邮件</a></div>
+			<div class="input-group mt10">
+				<span class="input-group-addon">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+				<input type="text" name="code" class="form-control" placeholder="邮箱收到的验证码" required>
+			</div>
+			<div class="input-group mt10">
+				<span class="input-group-addon">修改密码</span>
+				<input type="password" name="password" class="form-control" placeholder="请输入新密码" required>
+			</div>
+			<div class="input-group mt10">
+				<span class="input-group-addon">重复密码</span>
+				<input type="password" name="repassword" class="form-control" placeholder="请重复密码" required>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block mt10" type="submit">找回密码</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end 忘记密码-->
+
+
+</body>
+</html>

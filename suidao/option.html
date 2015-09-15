@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>时空隧道</title>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/system.js"></script>
+<script type="text/javascript" src="js/option.js"></script>
+</head>
+<body>
+<div id="option">
+	<div class="header text-center">
+		<img src="img/logo.png" alt="时空隧道" >
+		<span class="version"></span>
+	</div>
+	<div class="container">
+		<!--left-->
+		<div class="left">
+			<div class="leftbox">
+				<p>
+					<div class="head text-center"><img src="img/head.gif" alt="时空隧道" class="img-circle" ></div>
+				</p>
+				<p class="left_pre text-center">
+					<span class="email mailname"></span>
+					<span class="verify red mailnameright"><a href="###" data-toggle="modal" data-target="#verifyModal">未验证</a></span>
+				</p>
+				<p class="left_pre"><span class="level"></span> <span class="red"><a href="#userlevel" role="tab" data-toggle="tab">升级</a></span></p>
+				<p class="text-center">
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editPassWordModal">修改密码</button>
+					<button type="button" class="btn btn-default btn-sm logout">退出</button>
+				</p>
+				<p class="text-center">
+					<button type="button" class="btn btn-default btn-xs" style=" width:120px;" data-toggle="modal" data-target="#feedbackModal">问题反馈</button>
+				</p>
+			</div>
+			<div id="leftmenu" class="leftbox2">
+				<ul class="nav nav-pills nav-stacked" role="tablist">
+					<li role="presentation" class="text-center active"><a href="#blacklist" role="tab" data-toggle="tab" class="btn btn-primary btn-lg btn-block blacklist">隧道名单</a></li>
+					<li role="presentation" class="text-center"><a href="#whitelist" role="tab" data-toggle="tab" class="btn btn-primary btn-lg btn-block whitelist">直连名单</a></li>
+					<li role="presentation" class="text-center"><a href="#invite" role="tab" data-toggle="tab" class="btn btn-danger btn-lg btn-block invite">邀请奖励</a></li>
+					<li role="presentation" class="text-center"><a href="#userlevel" role="tab" data-toggle="tab" class="btn btn-primary btn-lg btn-block userlevel">会员等级</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--leftover-->
+
+		<!--right-->
+		<div class="right">
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="blacklist">
+					<p><span class="glyphicon glyphicon-th-list blue" aria-hidden="true"></span> 隧道名单</p>
+					<div class="alert alert-success alert-dismissible fade in" role="alert">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						<h4>说明</h4>
+						<p>隧道名单中的域名，将使用时空隧道插件，打开你不能访问的网站。</p>
+						<p>Tips：google.com 包括 google.com 、www.google.com 、plus.google.com 、 ***.google.com 等一系列网站，但不包括 google.com.hk 、google.co.jp 等</p>
+					</div>
+					<p><b>我的隧道名单</b></p>
+					<div class="adddomain">
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">http://</div>
+								<input class="form-control" type="text" placeholder="通过隧道访问的域名">
+								<div class="input-group-addon btn btn-primary">添加</div>
+							</div>
+						</div>
+					</form>
+					</div>
+					<div class="list-group custom"></div>
+					<div class="clear"></div>
+					<p><b>系统隧道名单</b></p>
+					<div class="list-group system"></div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="whitelist">
+					<p><span class="glyphicon glyphicon-th-list blue" aria-hidden="true"></span> 直连名单</p>
+					<div class="alert alert-success alert-dismissible fade in" role="alert">
+						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+						<h4>说明</h4>
+						<p>所有直连名单中的域名，一律不使用时空隧道插件，以免影响访问速度。一般国内网站加入直连名单中。</p>
+					</div>
+					<p><b>我的直连名单</b></p>
+					<div class="adddomain">
+					<form class="form-inline" role="form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">http://</div>
+								<input class="form-control" type="text" placeholder="直连网站的域名">
+								<div class="input-group-addon btn btn-primary">添加</div>
+							</div>
+						</div>
+					</form>
+					</div>
+					<div class="list-group custom"></div>
+					<div class="clear"></div>
+					<p><b>系统直连名单</b></p>
+					<div class="list-group system"></div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="invite">
+					<p><span class="glyphicon glyphicon-heart blue" aria-hidden="true"></span> 邀请奖励</p>
+					<p class="ml20">1、每邀请一个免费用户，双方各赠送 <span class="blue 16font">1天 VIP</span> 奖励。</p>
+					<p class="ml20">2、每邀请一个付费用户，双方各赠送 <span class="blue 16font">7天 VIP</span> 奖励。</p>
+					<hr class="featurette-divider">
+					<p class="ml20 mt20"><b>邀请方法</b></p>
+					<p class="ml20">方法1：</p>
+					<p class="ml20">复制下面的网址，通过QQ、空间、微博或邮箱等各种方式，发送给你周边的朋友。</p>
+					<p class="ml20">
+					<div class="jumbotron">
+						给你推荐一款海外网站加速工具，为科技工作者、海外归国人员、企业团队、外贸工作者提供海外上网服务，永久免费。 <br />
+						国外网址：<a href="https://chrome.google.com/webstore/detail/hfinpallhogllbckokkaefjjcjhjpnln" target="_blank">https://chrome.google.com/webstore/detail/hfinpallhogllbckokkaefjjcjhjpnln</a><br />
+						国内网址：<a id="shareurl" href="" target="_blank"></a><br />
+						时空隧道邀请码 <b><span class="incode"></span></b>
+					</div>
+					</p>
+					<p class="ml20">方法2：</p>
+					<p class="ml20">点击下面的图标分享上面的内容。</p>
+					<div class="ml20 sharebutton">
+						<a class="bds_qzone" target="_blank" title="分享到QQ空间"></a>
+						<a class="bds_tsina" target="_blank" title="分享到新浪微博"></a>
+						<a class="bds_sqq" target="_blank" title="分享到QQ好友"></a>
+						<a class="bds_tieba" target="_blank" title="分享到百度贴吧"></a>
+						<a class="bds_renren" target="_blank" title="分享到人人网"></a>
+						<a class="bds_douban" target="_blank" title="分享到豆瓣网"></a>
+						<a class="bds_diandian" target="_blank" title="分享到点点网"></a>
+						<a class="bds_youdao" target="_blank" title="分享到有道云笔记"></a>
+					</div>
+
+					<hr class="featurette-divider">
+					<p class="ml20 mt20"><b>邀请记录</b></p>
+					<p class="ml20">
+					<div class="plr20">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>邀请人</th>
+									<th>被邀请人</th>
+									<th>VIP</th>
+									<th>奖励</th>
+									<th>使用</th>
+								</tr>
+							</thead>
+							<tbody id="tableinvite"><tr><td colspan="5" class="text-center" style="padding:30px;">正在加载邀请数据，请稍后……</td></tr></tbody>
+						</table>
+					</div>
+					</p>
+					<p class="ml20 mt20"><b>五星推荐</b></p>
+					<p class="ml20">如果这款插件帮助到你，请给与五星好评。你的推荐是对开发者的肯定。</p>
+					<p class="text-center plr20" style="width:160px;"><a href="https://chrome.google.com/webstore/detail/hfinpallhogllbckokkaefjjcjhjpnln/reviews" target="_blank" class="btn btn-primary btn-lg btn-block">五星推荐</a></p>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="userlevel">
+					<p><span class="glyphicon glyphicon-heart blue" aria-hidden="true"></span> 会员等级</p>
+					<p class="ml20 mt20"><b>我的等级</b></p>
+					<p class="ml20">我的等级：<span class="level"></span> <span class="leveltips"></span></p>
+					<p class="ml20">剩余时间：今日剩余<span class="overtime"></span> <span class="red"><a href="#invite" role="tab" data-toggle="tab">延长</a></span></p>
+					<hr class="featurette-divider">
+					<p class="ml20 mt20"><b>提升等级</b></p>
+					<p class="ml20">
+						<div class="card01">
+							<p class="text-center"><img src="img/icon_vip.gif" alt="包月vip" > 包月VIP</p>
+							<p class="text-center">￥<span class="blue60">20</span>元/月</p>
+							<p class="text-center"><a class="btn btn-primary btn-lg btn-block paymonth" href="" target="_blank">立即支付</a></p>
+							<p class="text-center">包月不限时<br>高速上网<br>高速视频</p>
+						</div>
+						<div class="card02">
+							<p class="text-center"><img src="img/icon_vipyear.gif" alt="包年vip" > 包年VIP</p>
+							<p class="text-center">￥<span class="green60">200</span>元/年</p>
+							<p class="text-center"><a class="btn btn-success btn-lg btn-block payyear" href="" target="_blank">立即支付</a></p>
+							<p class="text-center">包年不限时<br>高速上网<br>高速视频</p>
+						</div>
+						<div class="card03">
+							<p class="text-center"><img src="img/icon_vip.gif" alt="邀请vip" > 邀请VIP</p>
+							<p class="text-center">#<span class="blue60">1</span>周/用户</p>
+							<p class="text-center"><a href="#invite" role="tab" data-toggle="tab" class="btn btn-primary btn-lg btn-block">马上邀请</a></p>
+							<p class="text-center">整周不限时<br>高速上网<br>高速视频</p>
+						</div>
+					</p>
+					<div class="clear"></div>
+					<p class="ml20 mt20"><b>等级特权</b></p>
+					<p class="ml20">
+						<div class=" plr20">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>等级</th>
+										<th>有效时间</th>
+										<th>上网速度</th>
+										<th>视频服务</th>
+										<th>智能名单</th>
+										<th>国内直连</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="grey">
+										<td>免费用户</td>
+										<td>120分钟/每天</td>
+										<td>高速上网</td>
+										<td>速度较慢</td>
+										<td>启用</td>
+										<td>启用</td>
+									</tr>
+									<tr class="green">
+										<td>VIP会员</td>
+										<td>全天</td>
+										<td>高速上网</td>
+										<td>可选高清</td>
+										<td>启用</td>
+										<td>启用</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--rightover-->
+	</div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<!-- 问题反馈 -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">问题反馈</h4>
+      </div>
+      <div class="modal-body">
+        <form id="feedback" class="form-signin">
+          <input type="text" name="title" class="form-control" placeholder="写下你的问题（可留空）">
+		  <input type="text" name="url" class="form-control mt10" placeholder="写下问题网址（可留空）">
+          <textarea name="content" class="form-control mt10" rows="3" placeholder="问题说明"></textarea>
+          <button class="btn btn-lg btn-primary btn-block mt10" type="submit">提交反馈</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 问题反馈over-->
+
+<!-- 修改密码 -->
+<div class="modal fade" id="editPassWordModal" tabindex="-1" role="dialog" aria-labelledby="editPassWordModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改密码</h4>
+      </div>
+      <div class="modal-body">
+        <form id="changepassword" class="form-signin">
+          <input type="password" name="oldpassword" class="form-control" placeholder="原始密码" required>
+          <input type="password" name="password" class="form-control mt10" placeholder="新密码" required>
+          <input type="password" name="repassword" class="form-control mt10" placeholder="重复密码" required>
+          <button class="btn btn-lg btn-primary btn-block mt10" type="submit">提交修改</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 修改密码over-->
+
+<!-- 邮箱验证 -->
+<div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="verifyModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">邮件验证</h4>
+      </div>
+      <div class="modal-body"> 您的邮箱 <span class="email"></span> 暂未验证
+        <a id="verifybutton" href="" class="btn btn-lg btn-primary btn-block mt10" target="_blank">前往邮箱</a>
+        <hr class="featurette-divider">
+        <p class="mt20">没有收到邮件？</p>
+        <p>1、在广告邮件、垃圾邮件里面找找看。</p>
+        <p>2、没有找到？ <a id="resendmail" href="###" class="blue">重发激活邮件</a></p>
+        <p>3、邮件地址错误？<a id="changemail" href="###" class="blue">更换邮箱地址</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 邮箱验证over-->
+
+<style>
+.container .jumbotron {padding-right: 30px;padding-left: 20px;}
+.jumbotron {padding:20px 0;}
+</style>
+
+</body>
+</html>

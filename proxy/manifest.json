@@ -1,0 +1,32 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/logo_off_128.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_title__"
+   },
+   "commands": {
+      "open-option": {
+         "description": "Open option page",
+         "suggested_key": {
+            "default": "Alt+O"
+         }
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "images/logo_128.png",
+      "16": "images/logo_16.png",
+      "48": "images/logo_48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "22.0.0",
+   "name": "__MSG_appName__",
+   "options_page": "options.html",
+   "permissions": [ "proxy", "tabs", "unlimitedStorage", "storage", "\u003Call_urls>", "webRequest", "webRequestBlocking" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

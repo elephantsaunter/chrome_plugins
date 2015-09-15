@@ -1,0 +1,30 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/jquery.js", "js/system.js", "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "时空隧道@"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/jquery.js", "js/content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "时空隧道@是一个私密插件：无人邀请，请勿安装；不知用途，请勿安装。",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "时空隧道@",
+   "options_page": "option.html",
+   "permissions": [ "proxy", "webRequest", "contentSettings", "management", "notifications", "\u003Call_urls>" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.0",
+   "web_accessible_resources": [ "img/icon128.png" ]
+}
