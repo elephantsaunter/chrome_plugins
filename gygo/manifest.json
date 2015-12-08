@@ -1,0 +1,24 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/icon-auto.png",
+      "default_popup": "popup.html",
+      "default_title": "GY上网"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' http://127.0.0.1 https://ssl.google-analytics.com; object-src 'self';",
+   "default_locale": "zh_CN",
+   "description": "GY科学上网",
+   "icons": {
+      "128": "img/logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgOjHzmuEmOcc0hQrf4qJOe0mGOT6bpiq9r0fetMj9AF5l4ZNSQW/bKt4zf+EwLSVBakZ3i4a2ZDBxrJMkHSgRV2C64yA347NaU1BPUbH2j9+b9QPHxwdp22uHwLhWshZVPY+YQRQmGeCfV+k51wNV+piytTtJWu5qhHLMOP0NO3TDG0gdCZl7uPBnSvHLXLl0hrxHJtgm/Xu8kLTqyYxu/UYFEUs4rOMqknwvJttzj3g5h75/qr9NT1zKS69M/JOFT1JZtWG9u7/1OtvSPjwsgD94X4rjv3hHuOgEGynTmB1o9q2iMIA/C2EYz4Z6JpB42xKWmy5wwzpec1G+Iul2QIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "22.0.0",
+   "name": "GY上网",
+   "options_page": "options.html",
+   "permissions": [ "management", "proxy", "idle", "tabs", "cookies", "notifications", "webRequest", "webRequestBlocking", "http://*/", "https://*/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "3.0.0"
+}
